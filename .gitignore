@@ -1,0 +1,6 @@
+dist/**/*.*
+node_modules
+test
+.idea/*.*
+src/script/*.*
+src/styles/**/*.*

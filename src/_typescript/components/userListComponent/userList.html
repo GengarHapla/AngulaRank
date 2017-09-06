@@ -1,0 +1,10 @@
+<md-list flex>
+    <md-list-item layout="row" md-whiteframe="4" ng-repeat="user in $ctrl.userList" ng-click="$ctrl.onUserClick(user)">
+        <div layout="row" class="md-list-item-text">
+            <img src={{user.avatar_url}} class="md-avatar">
+            <h3 class="user__title">{{user.login}}</h3>
+            <md-divider md-inset></md-divider>
+            <p class="user__score">Score: {{user.contributions}}</p>
+        </div>
+    </md-list-item>
+</md-list>

@@ -1,0 +1,28 @@
+<div layout="column" layout-fill>
+    <md-toolbar>
+
+        <div class="md-toolbar-tools">
+            <h2 md-truncate flex>AngulaRank</h2>
+
+            <md-button ng-click="$homeCtrl.goTo('Contributors')">
+                Contributors
+            </md-button>
+            <md-button ng-click="$homeCtrl.sortByFollowers()">
+                Followers
+            </md-button>
+            <md-button ng-click="$homeCtrl.goTo('Repos')">
+                Repos
+            </md-button>
+            <md-button ng-click="$homeCtrl.goTo('Gists')">
+                Gists
+            </md-button>
+        </div>
+
+    </md-toolbar>
+    <h1>Sorted by: {{$homeCtrl.currentFilter}}</h1>
+    <md-content>
+        <div class="mainContainer">
+            <user-list users="$homeCtrl.userList"></user-list>
+        </div>
+    </md-content>
+</div>
