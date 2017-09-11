@@ -9,3 +9,4 @@ npm install
 ```bash
 gulp watch
 ```
+Go to: http://localhost:8000
