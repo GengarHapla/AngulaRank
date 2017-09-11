@@ -3,9 +3,7 @@ import StorageService = ngStorage.StorageService;
 
 export default class SessionStorageService {
 
-    constructor(private $sessionStorage: StorageService) {
-        console.log('SessionStorageService init!1');
-    }
+    constructor(private $sessionStorage: StorageService) {}
 
     set(key: string, value: any) {
         this.$sessionStorage[key] = value;

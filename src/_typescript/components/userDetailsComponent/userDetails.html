@@ -1,0 +1,35 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content class="user__details">
+        <div>
+            <div layout="row">
+                <img ng-src="{{$ctrl.data.avatar_url}}" class="user__avatar">
+                <div layout="column">
+                    <h1>{{$ctrl.data.name || $ctrl.data.login}}</h1>
+                    <md-divider></md-divider>
+                    <div ng-repeat="(value, key) in $ctrl.userDetailsMap track by $index">
+                        <div ng-if="$ctrl.sortedData[value]">
+                            <h3>{{key}}: {{$ctrl.sortedData[value]}}</h3>
+                            <md-divider></md-divider>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <md-list>
+                <h3>User repos:</h3>
+                <md-list-item md-whiteframe="4"
+                              layout="column"
+                              layout-align="center center"
+                              layout-wrap ng-repeat="repo in $ctrl.repoData track by $index"
+                              ng-click="$ctrl.onRepoClick(repo)">
+                    <div class="md-item-text">
+                        <h3>{{repo.name}}</h3>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="$ctrl.closeDialog()" class="md-primary">Close Dialog</md-button>
+    </md-dialog-actions>
+</md-dialog>

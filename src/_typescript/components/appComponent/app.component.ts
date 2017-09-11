@@ -9,8 +9,6 @@ export class AppComponent {
         templateUrl: "views/app.component.html"
     };
 
-    constructor() {
-        console.log('AppComponent init');
-    }
+    constructor() {}
  
 }

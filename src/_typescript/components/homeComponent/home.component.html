@@ -4,25 +4,26 @@
         <div class="md-toolbar-tools">
             <h2 md-truncate flex>AngulaRank</h2>
 
-            <md-button ng-click="$homeCtrl.goTo('Contributors')">
-                Contributors
+            <md-button  ng-click="$homeCtrl.sortByContributors()">
+                Contributions
             </md-button>
             <md-button ng-click="$homeCtrl.sortByFollowers()">
                 Followers
             </md-button>
-            <md-button ng-click="$homeCtrl.goTo('Repos')">
+            <md-button ng-click="$homeCtrl.sortByRepos()">
                 Repos
             </md-button>
-            <md-button ng-click="$homeCtrl.goTo('Gists')">
+            <md-button ng-click="$homeCtrl.sortByGists()">
                 Gists
             </md-button>
         </div>
 
     </md-toolbar>
-    <h1>Sorted by: {{$homeCtrl.currentFilter}}</h1>
+    <h1 class="sorted_by">Sorted by: {{$homeCtrl.textFromNameMap($homeCtrl.currentFilter)}}</h1>
     <md-content>
         <div class="mainContainer">
-            <user-list users="$homeCtrl.userList"></user-list>
+                <user-list users="$homeCtrl.userList" show-property="$homeCtrl.userFilter"></user-list>
         </div>
     </md-content>
 </div>
+<div id="popupContainer"></div>

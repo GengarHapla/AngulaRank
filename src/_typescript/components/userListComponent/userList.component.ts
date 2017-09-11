@@ -1,23 +1,35 @@
+import DialogService from '../../services/dialogService/dialog.service';
+import { IAngularEvent } from 'angular';
+
 export class UserListComponent {
 
     static componentName: string = "userList";
     static componentConfig: ng.IComponentOptions = {
         bindings: {
-            users: '<'
+            users: '<',
+            showProperty: '<'
         },
         controller: UserListComponent,
         templateUrl: "_typescript/components/userListComponent/userList.html"
     };
 
+    constructor(private dialogService: DialogService) {}
+
     users: any;
+    showProperty: string;
 
     get userList() {
-        console.log(this.users)
         return this.users;
     }
 
-    onUserClick(value: any) {
-        console.log(value);
+    getScore(user: any) {
+        return user[this.showProperty];
+    }
+
+    onUserClick($event: IAngularEvent, user: any) {
+        this.dialogService.showUserDetailsDialog($event, user);
     }
  
 }
+
+UserListComponent.$inject = ['DialogService'];
