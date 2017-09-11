@@ -1,4 +1,4 @@
-AngulaRank
+AngulaRank - Styles and UX bearly touched, it works but could be working a lot better
 
 ## Installation
 ```bash
