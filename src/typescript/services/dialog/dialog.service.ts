@@ -1,7 +1,7 @@
 import * as angular from 'angular';
-import UserRepoService, { USER_REPO_LIST_NAME } from '../userRepoService/userRepo.service';
-import SortService from '../sortService/sort.service';
-import SessionStorageService from '../sessionStorageService/sessionStorage.service';
+import UserRepoService, { USER_REPO_LIST_NAME } from '../userRepo/userRepo.service';
+import SortService from '../sort/sort.service';
+import SessionStorageService from '../sessionStorage/sessionStorage.service';
 
 export default class DialogService {
 

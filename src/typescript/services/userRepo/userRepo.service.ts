@@ -1,8 +1,8 @@
 import * as _ from 'lodash';
 import { IHttpService, IQService } from 'angular';
-import ConnectService from '../connectService/connect.service';
-import { CONTRIBUTOR_LIST_NAME } from '../contributorService/contributor.service';
-import SessionStorageService from '../sessionStorageService/sessionStorage.service';
+import ConnectService from '../connect/connect.service';
+import { CONTRIBUTOR_LIST_NAME } from '../contributor/contributor.service';
+import SessionStorageService from '../sessionStorage/sessionStorage.service';
 
 export const USER_REPO_LIST_NAME = 'userRepoList';
 

@@ -1,8 +1,8 @@
-import SessionStorageService from '../sessionStorageService/sessionStorage.service';
+import SessionStorageService from '../sessionStorage/sessionStorage.service';
 import { IHttpService, IQService } from 'angular';
 import * as _ from 'lodash';
-import { CONTRIBUTOR_LIST_NAME } from '../contributorService/contributor.service';
-import ConnectService from '../connectService/connect.service';
+import { CONTRIBUTOR_LIST_NAME } from '../contributor/contributor.service';
+import ConnectService from '../connect/connect.service';
 
 export const SORTED_USERS_LIST_NAME: string = 'usersList';
 export const SORT_BY_CONTRIBUTIONS_NAME: string = 'contributions';
@@ -65,7 +65,7 @@ export default class SortService {
         const contributorList = this.getContributorList();
         const userToUpdate: any = contributorList[user.id];
         const { id } = userToUpdate;
-        const index = _.findIndex(sessionSortedUsersList, { id });
+        const index = _.findIndex(sessionSortedUsersList, (o: any) => o.id === id);
 
         sessionSortedUsersList[index] = _.merge({}, sessionSortedUsersList[index], userToUpdate);
         this.saveSortedUsersList(sessionSortedUsersList);
@@ -87,7 +87,7 @@ export default class SortService {
         return this.sessionStorageService.get(SORTED_USERS_LIST_NAME);
     }
 
-    getContributorList(): Array<Object> {
+    getContributorList(): any {
         return this.sessionStorageService.get(CONTRIBUTOR_LIST_NAME);
     }
 

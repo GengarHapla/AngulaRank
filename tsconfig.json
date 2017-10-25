@@ -1,6 +1,6 @@
 {
     "files": [
-        "src/_typescript/main.ts"
+      "src/typescript/main.ts"
     ],
     "compilerOptions": {
         "noImplicitAny": true,

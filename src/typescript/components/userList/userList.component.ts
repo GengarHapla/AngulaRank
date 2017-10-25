@@ -1,4 +1,4 @@
-import DialogService from '../../services/dialogService/dialog.service';
+import DialogService from '../../services/dialog/dialog.service';
 import { IAngularEvent } from 'angular';
 
 export class UserListComponent {
@@ -10,7 +10,7 @@ export class UserListComponent {
             showProperty: '<'
         },
         controller: UserListComponent,
-        templateUrl: "_typescript/components/userListComponent/userList.html"
+        templateUrl: "typescript/components/userList/userList.template.html"
     };
 
     constructor(private dialogService: DialogService) {}

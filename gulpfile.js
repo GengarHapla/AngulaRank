@@ -12,17 +12,17 @@ var buffer      = require('vinyl-buffer');
 
 var paths = {
 	tscripts: {
-		src: ["src/_typescript/**/*.ts"],
-		dest: "src/script"
+		src: ["src/typescript/**/*.ts"],
+		dest: "src/dist/script"
 	},
 	html:{
-		views: ["src/views/**/*.html", "src/index.html"],
+		views: ["src/index.html"],
 		main: "src/index.html",
 		dest: "dist/views/**/*.html"
 	},
 	sass: {
-		src: ["src/_sass/**/*.sass"],
-		dest: "src/styles",
+		src: ["src/sass/**/*.sass"],
+		dest: "src/dist/styles",
 		release: "dist/styles"
 	},
 	fonts: {
@@ -59,7 +59,7 @@ gulp.task("bundle:ts", function (done) {
 	return browserify({
 		basedir: ".",
 		debug: true,
-		entries: ["src/_typescript/main.ts"],
+		entries: ["src/typescript/main.ts"],
 		cache: {},
 		packageCache: {}
 	})
@@ -103,10 +103,10 @@ gulp.task("ts-watch", ["bundle:ts"], function (done) {
 
 gulp.task("copy", function () {
 	return gulp.src([
-		"!src/_sass",
-		"!src/_sass/**",
-		"!src/_typescript",
-		"!src/_typescript/**",
+		"!src/sass",
+		"!src/sass/**",
+		"!src/typescript",
+		"!src/typescript/**",
 		"src/**/*"
 	])
 		.pipe(gulp.dest(paths.dist))

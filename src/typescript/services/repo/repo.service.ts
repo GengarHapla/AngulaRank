@@ -1,4 +1,4 @@
-import SessionStorageService from '../sessionStorageService/sessionStorage.service';
+import SessionStorageService from '../sessionStorage/sessionStorage.service';
 import { IHttpService } from 'angular';
 import * as _ from 'lodash';
 

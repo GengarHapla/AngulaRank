@@ -1,12 +1,12 @@
-import RepoService from '../../services/repoService/repo.service';
-import ContributorService from '../../services/contributorService/contributor.service';
-import SessionStorageService from '../../services/sessionStorageService/sessionStorage.service';
+import RepoService from '../../services/repo/repo.service';
+import ContributorService from '../../services/contributor/contributor.service';
+import SessionStorageService from '../../services/sessionStorage/sessionStorage.service';
 import * as _ from 'lodash';
 import * as hello from 'hellojs';
 import SortService, {
     SORTED_USERS_LIST_NAME, SORT_BY_CONTRIBUTIONS_NAME,
     SORT_BY_FOLLOWERS_NAME, SORT_BY_REPOS_NAME, SORT_BY_GISTS_NAME
-} from '../../services/sortService/sort.service';
+} from '../../services/sort/sort.service';
 
 export class HomeComponent {
 
@@ -15,7 +15,7 @@ export class HomeComponent {
         bindings: {},
         controller: HomeComponent,
         controllerAs: '$homeCtrl',
-        templateUrl: '_typescript/components/homeComponent/home.component.html'
+        templateUrl: 'typescript/components/home/home.template.html'
     };
 
     hello: any = hello;

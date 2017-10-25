@@ -20,7 +20,7 @@ export class UserDetailsComponent {
         },
         controller: UserDetailsComponent,
         controllerAs: '$ctrl',
-        templateUrl: '_typescript/components/userDetailsComponent/userDetails.html'
+        templateUrl: 'typescript/components/userDetails/userDetails.template.html'
     };
 
 

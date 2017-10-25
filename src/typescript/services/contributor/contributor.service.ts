@@ -1,7 +1,7 @@
-import SessionStorageService from '../sessionStorageService/sessionStorage.service';
+import SessionStorageService from '../sessionStorage/sessionStorage.service';
 import { IHttpService, IQService } from 'angular';
 import * as _ from 'lodash';
-import SortService from '../sortService/sort.service';
+import SortService from '../sort/sort.service';
 
 export const CONTRIBUTOR_LIST_NAME: string = 'contributorList';
 

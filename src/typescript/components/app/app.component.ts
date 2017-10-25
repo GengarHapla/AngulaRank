@@ -6,7 +6,7 @@ export class AppComponent {
         },
         controller: AppComponent,
         controllerAs: "$AppCtrl",
-        templateUrl: "views/app.component.html"
+        templateUrl: "typescript/components/app/app.component.html"
     };
 
     constructor() {}
